@@ -1,0 +1,11 @@
+.banner {
+    background-color: #6278F7;
+    text-align: center;
+    border-radius: 0px 0px 0px 125px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.19);
+}
+
+.banner img{
+    width: 95%;
+    border-radius: 0px 0px 0px 125px;
+}
