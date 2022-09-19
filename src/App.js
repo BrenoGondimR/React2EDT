@@ -1,17 +1,25 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 import Banner from "./Components/Banner/Index";
 import Formulario from "./Components/Formulario/Index";
 
 
-class App extends Component {
-  render() {
+function App() {
+
+
+        const [colaboradores, setColaboradores] = useState([])
+
+        const aoNovoColaboradorAdicionado = (colaborador) => {
+            console.log(colaborador)
+            setColaboradores([...colaboradores, colaborador])
+        }
+
     return (
       <div className="App">
           <Banner/>
-          <Formulario/>
+          <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
       </div>
     );
-  }
+
 }
 
 export default App;
